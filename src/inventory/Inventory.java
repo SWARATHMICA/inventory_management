@@ -29,5 +29,19 @@ public class Inventory {
         }
         return total;
     }
+    public Item getMostExpensiveItem() {
+        Item maxItem = null;
+        double maxValue = 0;
+
+        for (Item item : items.values()) {
+            double value = item.calculateValue();
+            if (value > maxValue) {
+                maxValue = value;
+                maxItem = item;
+            }
+        }
+        return maxItem;
+    }
+
 
 }
