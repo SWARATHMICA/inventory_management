@@ -37,4 +37,7 @@ public abstract class Item {
     public double getPrice() {
         return price;
     }
+
+    public abstract double calculateValue();
+
 }
