@@ -16,7 +16,7 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
 
-            System.out.println("\nEnter item type (pushnut / outernut / bolt): ");
+            System.out.println("\nEnter item type (nut / bolt): ");
             String type = sc.next().toLowerCase();
 
             System.out.print("Enter item name: ");
@@ -31,16 +31,13 @@ public class Main {
             Item item = null;
 
             switch (type) {
-                case "pushnut":
-                    item = new PushNut(name, count, price);
-                    break;
 
-                case "outernut":
-                    item = new OuterNut(name, count, price);
+                case "nut":
+                    item = new Nut(type,name, count, price);
                     break;
 
                 case "bolt":
-                    item = new Bolt(name, count, price);
+                    item = new Bolt(type,name, count, price);
                     break;
 
                 default:
