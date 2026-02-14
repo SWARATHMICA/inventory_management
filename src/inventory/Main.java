@@ -66,7 +66,8 @@ public class Main {
                 inventory.addItemToDatabase(name, count, type);
             }
             
-
+            System.out.println("Total stock:");
+            inventory.showAllItems();
             
             System.out.print("\nEnter number of requests: ");
             int requests = sc.nextInt();
@@ -90,8 +91,7 @@ public class Main {
             System.out.println("Net worth: " + inventory.calculateNetWorth());
             System.out.println("Most expensive item: " +
                     inventory.getMostExpensiveItem().getName());
-            System.out.println("Remaining stock:");
-            inventory.showAllItems();
+            
 
         }
     }
